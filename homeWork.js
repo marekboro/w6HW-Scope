@@ -11,19 +11,19 @@
 // predict what the output or error will be and why. 
 
 
-// Episode 1
-const scenario = {
-    murderer: 'Miss Scarlet',
-    room: 'Library',
-    weapon: 'Rope'
-  };
+// EPISODE 1
+// const scenario = {
+//     murderer: 'Miss Scarlet',
+//     room: 'Library',
+//     weapon: 'Rope'
+//   };
   
-  const declareMurderer = function() {
-    return `The murderer is ${scenario.murderer}.`;
-  }
+//   const declareMurderer = function() {
+//     return `The murderer is ${scenario.murderer}.`;
+//   }
   
-  const verdict = declareMurderer();
-  console.log(verdict);
+//   const verdict = declareMurderer();
+//   console.log(verdict);
 
 // PREDICTION:
 // Should run ok and verdict should be: The murderer is Miss Scarlet
@@ -31,7 +31,11 @@ const scenario = {
 // Ran code:
 // as expected
 
-// Episode 2
+
+
+
+
+// EPISODE 2
 
 // const murderer = 'Professor Plum';
 
@@ -52,7 +56,7 @@ const scenario = {
 // Ran code:
 // code ERRORs out as we try to overwrite a constant variable.
 
-// // Episode 3
+// EPISODE 3
 // let murderer = 'Professor Plum';
 
 // const declareMurderer = function () {
@@ -66,21 +70,29 @@ const scenario = {
 // const secondVerdict = `The murderer is ${murderer}.`;
 // console.log('Second Verdict: ', secondVerdict);
 
-// // Episode 4
-// let suspectOne = 'Miss Scarlet';
-// let suspectTwo = 'Professor Plum';
-// let suspectThree = 'Mrs. Peacock';
+// PREDICTION: Errors out with variable is already defined (murderer)? LET should be locked in scope to declareMurderer but it should not be possible for it to have the same name as variable of a higher scope
+// Ran code: huh.... so it Allowed for the same name to be used because the scope was only for that block. that said, the original 'murdere' was never overwritten! 
 
-// const declareAllSuspects = function () {
-//     let suspectThree = 'Colonel Mustard';
-//     return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
-// }
 
-// const suspects = declareAllSuspects();
-// console.log(suspects);
-// console.log(`Suspect three is ${suspectThree}.`);
+// EPISODE 4
+let suspectOne = 'Miss Scarlet';
+let suspectTwo = 'Professor Plum';
+let suspectThree = 'Mrs. Peacock';
 
-// // Episode 5
+const declareAllSuspects = function () {
+    let suspectThree = 'Colonel Mustard';
+    return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
+}
+
+const suspects = declareAllSuspects();
+console.log(suspects);
+console.log(`Suspect three is ${suspectThree}.`);
+
+// PREDICTION: Errors out with variable is already defined (murderer)? LET should be locked in scope to declareMurderer but it should not be possible for it to have the same name as variable of a higher scope
+// Ran code: huh.... so it Allowed for the same name to be used because the scope was only for that block. that said, the original 'murdere' was never overwritten! 
+
+
+// // EPISODE 5
 // const scenario = {
 //     murderer: 'Miss Scarlet',
 //     room: 'Kitchen',
@@ -99,7 +111,7 @@ const scenario = {
 // const verdict = declareWeapon();
 // console.log(verdict);
 
-// // Episode 6
+// // EPISODE 6
 // let murderer = 'Colonel Mustard';
 
 // const changeMurderer = function () {
@@ -120,7 +132,7 @@ const scenario = {
 // const verdict = declareMurderer();
 // console.log(verdict);
 
-// // Episode 7
+// // EPISODE 7
 // let murderer = 'Professor Plum';
 
 // const changeMurderer = function () {
@@ -147,7 +159,7 @@ const scenario = {
 // const verdict = declareMurderer();
 // console.log(verdict);
 
-// // Episode 8
+// // EPISODE 8
 // const scenario = {
 //     murderer: 'Mrs. Peacock',
 //     room: 'Conservatory',
@@ -183,7 +195,7 @@ const scenario = {
 // const verdict = declareWeapon();
 // console.log(verdict);
 
-// // Episode 9
+// // EPISODE 9
 
 // let murderer = 'Professor Plum';
 
