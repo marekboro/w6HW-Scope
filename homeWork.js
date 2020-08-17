@@ -92,48 +92,51 @@
 // Ran code: Woohoo! I was right
 
 
-// EPISODE 5
-const scenario = {
-    murderer: 'Miss Scarlet',
-    room: 'Kitchen',
-    weapon: 'Candle Stick'
-};
+// // EPISODE 5
+// const scenario = {
+//     murderer: 'Miss Scarlet',
+//     room: 'Kitchen',
+//     weapon: 'Candle Stick'
+// };
 
-const changeWeapon = function (newWeapon) {
-    scenario.weapon = newWeapon;
-}
-
-const declareWeapon = function () {
-    return `The weapon is the ${scenario.weapon}.`;
-}
-
-changeWeapon('Revolver');
-const verdict = declareWeapon();
-console.log(verdict);
-// PREDICTION: prints: The weapon is the Revolver. scenario may be a const but its variables's values aren't
-// Ran code:Woohoo! I was right again
-
-
-// // EPISODE 6
-// let murderer = 'Colonel Mustard';
-
-// const changeMurderer = function () {
-//     murderer = 'Mr. Green';
-
-//     const plotTwist = function () {
-//         murderer = 'Mrs. White';
-//     }
-
-//     plotTwist();
+// const changeWeapon = function (newWeapon) {
+//     scenario.weapon = newWeapon;
 // }
 
-// const declareMurderer = function () {
-//     return `The murderer is ${murderer}.`;
+// const declareWeapon = function () {
+//     return `The weapon is the ${scenario.weapon}.`;
 // }
 
-// changeMurderer();
-// const verdict = declareMurderer();
+// changeWeapon('Revolver');
+// const verdict = declareWeapon();
 // console.log(verdict);
+// // PREDICTION: prints: The weapon is the Revolver. scenario may be a const but its variables's values aren't
+// // Ran code:Woohoo! I was right again
+
+
+// EPISODE 6
+let murderer = 'Colonel Mustard';
+
+const changeMurderer = function () {
+    murderer = 'Mr. Green';             // should overwrite murderer 
+
+    const plotTwist = function () {
+        murderer = 'Mrs. White';        
+    }
+
+    plotTwist();                        // should overwrite murderer again to Mrs. White
+}
+
+const declareMurderer = function () {
+    return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();   // changed to Mrs. White
+const verdict = declareMurderer();
+console.log(verdict);
+// PREDICTION:   `The murderer is Mrs. White.`  
+// Ran code: Woohoo! I was right again,again
+
 
 // // EPISODE 7
 // let murderer = 'Professor Plum';
