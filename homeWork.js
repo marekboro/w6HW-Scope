@@ -171,58 +171,60 @@
 
 
 // EPISODE 8
-const scenario = {
-    murderer: 'Mrs. Peacock',
-    room: 'Conservatory',
-    weapon: 'Lead Pipe'
-};
+// const scenario = {
+//     murderer: 'Mrs. Peacock',
+//     room: 'Conservatory',
+//     weapon: 'Lead Pipe'
+// };
 
-const changeScenario = function () {
-    scenario.murderer = 'Mrs. Peacock';
-    scenario.room = 'Dining Room';
+// const changeScenario = function () {
+//     scenario.murderer = 'Mrs. Peacock';
+//     scenario.room = 'Dining Room';
 
-    const plotTwist = function (room) {
-        if (scenario.room === room) {
-            scenario.murderer = 'Colonel Mustard';
-        }
+//     const plotTwist = function (room) {
+//         if (scenario.room === room) {
+//             scenario.murderer = 'Colonel Mustard';
+//         }
 
-        const unexpectedOutcome = function (murderer) {
-            if (scenario.murderer === murderer) {
-                scenario.weapon = 'Candle Stick';       //will execute
-            }
-        }
+//         const unexpectedOutcome = function (murderer) {
+//             if (scenario.murderer === murderer) {
+//                 scenario.weapon = 'Candle Stick';       //will execute
+//             }
+//         }
 
-        unexpectedOutcome('Colonel Mustard');       // 189 will run
-    }
+//         unexpectedOutcome('Colonel Mustard');       // 189 will run
+//     }
 
-    plotTwist('Dining Room');       // 184 will run, murd = 'Colonel Mustard' weapon 'Candle Stick'
-}
+//     plotTwist('Dining Room');       // 184 will run, murd = 'Colonel Mustard' weapon 'Candle Stick'
+// }
 
-const declareWeapon = function () {
-    return `The weapon is ${scenario.weapon}.`
-}
+// const declareWeapon = function () {
+//     return `The weapon is ${scenario.weapon}.`
+// }
 
-changeScenario();
-const verdict = declareWeapon();
-console.log(verdict);
+// changeScenario();
+// const verdict = declareWeapon();
+// console.log(verdict);
 
 
 // PREDICTION: `The weapon is Candle Stick.`
-// Ran code: 
+// Ran code: Great success! Yack-Shie-mash
 
 
 // // EPISODE 9
 
-// let murderer = 'Professor Plum';
+let murderer = 'Professor Plum';
 
-// if (murderer === 'Professor Plum') {
-//     let murderer = 'Mrs. Peacock';
-// }
+if (murderer === 'Professor Plum') {
+    let murderer = 'Mrs. Peacock';          // creates a new 'murderer' within the 'if'scope
+}
 
-// const declareMurderer = function () {
-//     return `The murderer is ${murderer}.`;
-// }
+const declareMurderer = function () {
+    return `The murderer is ${murderer}.`;
+}
 
-// const verdict = declareMurderer();
-// console.log(verdict);
+const verdict = declareMurderer();
+console.log(verdict);
 
+// PREDICTION: `The murderer is 'Professor Plum'.
+// Ran code: 
