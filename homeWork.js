@@ -114,56 +114,59 @@
 // // Ran code:Woohoo! I was right again
 
 
-// EPISODE 6
-let murderer = 'Colonel Mustard';
-
-const changeMurderer = function () {
-    murderer = 'Mr. Green';             // should overwrite murderer 
-
-    const plotTwist = function () {
-        murderer = 'Mrs. White';        
-    }
-
-    plotTwist();                        // should overwrite murderer again to Mrs. White
-}
-
-const declareMurderer = function () {
-    return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();   // changed to Mrs. White
-const verdict = declareMurderer();
-console.log(verdict);
-// PREDICTION:   `The murderer is Mrs. White.`  
-// Ran code: Woohoo! I was right again,again
-
-
-// // EPISODE 7
-// let murderer = 'Professor Plum';
+// // EPISODE 6
+// let murderer = 'Colonel Mustard';
 
 // const changeMurderer = function () {
-//     murderer = 'Mr. Green';
+//     murderer = 'Mr. Green';             // should overwrite murderer 
 
 //     const plotTwist = function () {
-//         let murderer = 'Colonel Mustard';
-
-//         const unexpectedOutcome = function () {
-//             murderer = 'Miss Scarlet';
-//         }
-
-//         unexpectedOutcome();
+//         murderer = 'Mrs. White';        
 //     }
 
-//     plotTwist();
+//     plotTwist();                        // should overwrite murderer again to Mrs. White
 // }
 
 // const declareMurderer = function () {
 //     return `The murderer is ${murderer}.`;
 // }
 
-// changeMurderer();
+// changeMurderer();   // changed to Mrs. White
 // const verdict = declareMurderer();
 // console.log(verdict);
+// // PREDICTION:   `The murderer is Mrs. White.`  
+// // Ran code: Woohoo! I was right again,again
+
+
+// EPISODE 7
+let murderer = 'Professor Plum';
+
+const changeMurderer = function () {
+    murderer = 'Mr. Green';                 // overwrites murderer to Mr. Green'
+
+    const plotTwist = function () {
+        let murderer = 'Colonel Mustard';   // creates murderer Colonel Mustard within scope of plotTwist'
+
+        const unexpectedOutcome = function () {
+            murderer = 'Miss Scarlet';      // overwrites murderer(s) to 'Miss Scarlet' or throws out an errors as the code does not know which murderer to overwrite?
+        }
+
+        unexpectedOutcome();
+    }
+
+    plotTwist();
+}
+
+const declareMurderer = function () {
+    return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+// PREDICTION:  Errors out as 151 tries to overwrite 2 different murderer's ?  OR `The murderer is Miss Scarlet`
+// Ran code: 
+
 
 // // EPISODE 8
 // const scenario = {
