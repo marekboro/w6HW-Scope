@@ -17,11 +17,11 @@
 //     room: 'Library',
 //     weapon: 'Rope'
 //   };
-  
+
 //   const declareMurderer = function() {
 //     return `The murderer is ${scenario.murderer}.`;
 //   }
-  
+
 //   const verdict = declareMurderer();
 //   console.log(verdict);
 
@@ -138,73 +138,78 @@
 // // Ran code: Woohoo! I was right again,again
 
 
-// EPISODE 7
-let murderer = 'Professor Plum';
+// // EPISODE 7
+// let murderer = 'Professor Plum';
 
-const changeMurderer = function () {
-    murderer = 'Mr. Green';                 // overwrites murderer to Mr. Green'
+// const changeMurderer = function () {
+//     murderer = 'Mr. Green';                 // overwrites murderer to Mr. Green'
 
-    const plotTwist = function () {
-        let murderer = 'Colonel Mustard';   // creates murderer Colonel Mustard within scope of plotTwist'
+//     const plotTwist = function () {
+//         let murderer = 'Colonel Mustard';   // creates murderer Colonel Mustard within scope of plotTwist'
 
-        const unexpectedOutcome = function () {
-            murderer = 'Miss Scarlet';      // overwrites murderer(s) to 'Miss Scarlet' or throws out an errors as the code does not know which murderer to overwrite?
-        }
-
-        unexpectedOutcome();
-    }
-
-    plotTwist();
-}
-
-const declareMurderer = function () {
-    return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
-// PREDICTION:  Errors out as 151 tries to overwrite 2 different murderer's ?  OR `The murderer is Miss Scarlet`
-// Ran code: Mr. Green! =
-// explanation being that 151 only applies to the new plotTwis murderer 148, not the episode 7 one.
- 
-
-
-// // EPISODE 8
-// const scenario = {
-//     murderer: 'Mrs. Peacock',
-//     room: 'Conservatory',
-//     weapon: 'Lead Pipe'
-// };
-
-// const changeScenario = function () {
-//     scenario.murderer = 'Mrs. Peacock';
-//     scenario.room = 'Dining Room';
-
-//     const plotTwist = function (room) {
-//         if (scenario.room === room) {
-//             scenario.murderer = 'Colonel Mustard';
+//         const unexpectedOutcome = function () {
+//             murderer = 'Miss Scarlet';      // overwrites murderer(s) to 'Miss Scarlet' or throws out an errors as the code does not know which murderer to overwrite?
 //         }
 
-//         const unexpectedOutcome = function (murderer) {
-//             if (scenario.murderer === murderer) {
-//                 scenario.weapon = 'Candle Stick';
-//             }
-//         }
-
-//         unexpectedOutcome('Colonel Mustard');
+//         unexpectedOutcome();
 //     }
 
-//     plotTwist('Dining Room');
+//     plotTwist();
 // }
 
-// const declareWeapon = function () {
-//     return `The weapon is ${scenario.weapon}.`
+// const declareMurderer = function () {
+//     return `The murderer is ${murderer}.`;
 // }
 
-// changeScenario();
-// const verdict = declareWeapon();
+// changeMurderer();
+// const verdict = declareMurderer();
 // console.log(verdict);
+// // PREDICTION:  Errors out as 151 tries to overwrite 2 different murderer's ?  OR `The murderer is Miss Scarlet`
+// // Ran code: Mr. Green! =
+// // explanation being that 151 only applies to the new plotTwis murderer 148, not the episode 7 one.
+
+
+
+// EPISODE 8
+const scenario = {
+    murderer: 'Mrs. Peacock',
+    room: 'Conservatory',
+    weapon: 'Lead Pipe'
+};
+
+const changeScenario = function () {
+    scenario.murderer = 'Mrs. Peacock';
+    scenario.room = 'Dining Room';
+
+    const plotTwist = function (room) {
+        if (scenario.room === room) {
+            scenario.murderer = 'Colonel Mustard';
+        }
+
+        const unexpectedOutcome = function (murderer) {
+            if (scenario.murderer === murderer) {
+                scenario.weapon = 'Candle Stick';       //will execute
+            }
+        }
+
+        unexpectedOutcome('Colonel Mustard');       // 189 will run
+    }
+
+    plotTwist('Dining Room');       // 184 will run, murd = 'Colonel Mustard' weapon 'Candle Stick'
+}
+
+const declareWeapon = function () {
+    return `The weapon is ${scenario.weapon}.`
+}
+
+changeScenario();
+const verdict = declareWeapon();
+console.log(verdict);
+
+
+// PREDICTION: `The weapon is Candle Stick.`
+// Ran code: 
+
 
 // // EPISODE 9
 
