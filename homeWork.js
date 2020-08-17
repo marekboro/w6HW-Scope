@@ -75,41 +75,44 @@
 
 
 // EPISODE 4
-let suspectOne = 'Miss Scarlet';
-let suspectTwo = 'Professor Plum';
-let suspectThree = 'Mrs. Peacock';
+// let suspectOne = 'Miss Scarlet';
+// let suspectTwo = 'Professor Plum';
+// let suspectThree = 'Mrs. Peacock';
 
-const declareAllSuspects = function () {
-    let suspectThree = 'Colonel Mustard';
-    return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
-}
+// const declareAllSuspects = function () {
+//     let suspectThree = 'Colonel Mustard';
+//     return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
+// }
 
-const suspects = declareAllSuspects();
-console.log(suspects);
-console.log(`Suspect three is ${suspectThree}.`);
+// const suspects = declareAllSuspects();
+// console.log(suspects);
+// console.log(`Suspect three is ${suspectThree}.`);
 
-// PREDICTION: Errors out with variable is already defined (murderer)? LET should be locked in scope to declareMurderer but it should not be possible for it to have the same name as variable of a higher scope
-// Ran code: huh.... so it Allowed for the same name to be used because the scope was only for that block. that said, the original 'murdere' was never overwritten! 
+// PREDICTION: based on ep3, this should print 2 lines, FIRST: miss scarlet, proff plum and Colonel mustart, the SECOND line should show 'Suspect three is Mrs. Peacock' because despite having the same names, those variables do not share a scope so are not the same
+// Ran code: Woohoo! I was right
 
 
 // // EPISODE 5
-// const scenario = {
-//     murderer: 'Miss Scarlet',
-//     room: 'Kitchen',
-//     weapon: 'Candle Stick'
-// };
+const scenario = {
+    murderer: 'Miss Scarlet',
+    room: 'Kitchen',
+    weapon: 'Candle Stick'
+};
 
-// const changeWeapon = function (newWeapon) {
-//     scenario.weapon = newWeapon;
-// }
+const changeWeapon = function (newWeapon) {
+    scenario.weapon = newWeapon;
+}
 
-// const declareWeapon = function () {
-//     return `The weapon is the ${scenario.weapon}.`;
-// }
+const declareWeapon = function () {
+    return `The weapon is the ${scenario.weapon}.`;
+}
 
-// changeWeapon('Revolver');
-// const verdict = declareWeapon();
-// console.log(verdict);
+changeWeapon('Revolver');
+const verdict = declareWeapon();
+console.log(verdict);
+// // PREDICTION:
+// // Ran code:
+
 
 // // EPISODE 6
 // let murderer = 'Colonel Mustard';
