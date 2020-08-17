@@ -165,7 +165,9 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 // PREDICTION:  Errors out as 151 tries to overwrite 2 different murderer's ?  OR `The murderer is Miss Scarlet`
-// Ran code: 
+// Ran code: Mr. Green! =
+// explanation being that 151 only applies to the new plotTwis murderer 148, not the episode 7 one.
+ 
 
 
 // // EPISODE 8
