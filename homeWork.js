@@ -8,6 +8,7 @@
 // look at the following code snippets and predict what the output or error will be and why. 
 // Copy the following episodes into a JavaScript file and add comments under each one detailing the reason for your predicted output.
 
+// predict what the output or error will be and why. 
 
 
 // Episode 1
@@ -24,6 +25,11 @@ const declareMurderer = function () {
 changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
+
+// PREDICTION:
+// murderer is a consts so its value 'Professor Plum' cannot be changed
+// verdict should be `The murderer is Professor Plum.`
+
 
 // // Episode 2
 
