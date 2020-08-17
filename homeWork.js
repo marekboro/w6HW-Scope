@@ -92,7 +92,7 @@
 // Ran code: Woohoo! I was right
 
 
-// // EPISODE 5
+// EPISODE 5
 const scenario = {
     murderer: 'Miss Scarlet',
     room: 'Kitchen',
@@ -110,8 +110,8 @@ const declareWeapon = function () {
 changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
-// // PREDICTION:
-// // Ran code:
+// PREDICTION: prints: The weapon is the Revolver. scenario may be a const but its variables's values aren't
+// Ran code:Woohoo! I was right again
 
 
 // // EPISODE 6
