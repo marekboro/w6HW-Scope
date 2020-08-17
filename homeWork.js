@@ -12,26 +12,26 @@
 
 
 // Episode 1
-const murderer = 'Professor Plum';
-
-const changeMurderer = function () {
-    murderer = 'Mrs. Peacock';
-}
-
-const declareMurderer = function () {
-    return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+const scenario = {
+    murderer: 'Miss Scarlet',
+    room: 'Library',
+    weapon: 'Rope'
+  };
+  
+  const declareMurderer = function() {
+    return `The murderer is ${scenario.murderer}.`;
+  }
+  
+  const verdict = declareMurderer();
+  console.log(verdict);
 
 // PREDICTION:
-// murderer is a consts so its value 'Professor Plum' cannot be changed
-// verdict should be `The murderer is Professor Plum.`
+// Should run ok and verdict should be: The murderer is Miss Scarlet
 
+// Ran code:
+// as expected
 
-// // Episode 2
+// Episode 2
 
 // const murderer = 'Professor Plum';
 
@@ -46,6 +46,11 @@ console.log(verdict);
 // changeMurderer();
 // const verdict = declareMurderer();
 // console.log(verdict);
+// // PREDICTION:
+// murderer is a consts so its value 'Professor Plum' cannot be changed
+// verdict should be `The murderer is Professor Plum.`
+// Ran code:
+// code ERRORs out as we try to overwrite a constant variable.
 
 // // Episode 3
 // let murderer = 'Professor Plum';
