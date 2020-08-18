@@ -1,3 +1,8 @@
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+
 // Learning Objectives
 
 // Understand function scope
@@ -213,18 +218,72 @@
 
 // // EPISODE 9
 
-let murderer = 'Professor Plum';
+// let murderer = 'Professor Plum';
 
-if (murderer === 'Professor Plum') {
-    let murderer = 'Mrs. Peacock';          // creates a new 'murderer' within the 'if'scope
-}
+// if (murderer === 'Professor Plum') {
+//     let murderer = 'Mrs. Peacock';          // creates a new 'murderer' within the 'if'scope
+// }
 
-const declareMurderer = function () {
-    return `The murderer is ${murderer}.`;
-}
+// const declareMurderer = function () {
+//     return `The murderer is ${murderer}.`;
+// }
 
-const verdict = declareMurderer();
-console.log(verdict);
+// const verdict = declareMurderer();
+// console.log(verdict);
 
 // PREDICTION: `The murderer is 'Professor Plum'.
-// Ran code: 
+// Ran code: delicious taste of victory!
+
+
+//EPISODE 10
+
+const scenario = {
+    murderer: 'Katie',
+    room: 'psd61',
+    weapon: 'Scope',
+    victim: 'Tim'
+};
+
+const students = ["Marek", "Callum", "Tim", "Lucy", "Vishal", "Ben", "Duncan", "Jonny"]
+const teachers = ["Ally", "Katie", "Jarrod", "Jennifer"]
+
+const getRandomListValue = function (someList) {
+    randomIndex = getRandomInt(someList.length)
+    return someList[randomIndex]
+}
+
+
+const changeScenario = function () {
+    scenario.murderer = getRandomListValue(teachers);
+    if (scenario.murderer === "Ally") {
+        let weapon = "Python"
+        scenario.murderer = "Katie"
+    }
+    const plotTwist = function (room) {
+        if (scenario.room === room) {
+            scenario.murderer = "Jarrod"
+            let murderer = "Jennifer"
+
+            const unexpectedOutcome = function (murderer) {
+                if (scenario.murderer === murderer) {
+                    scenario.weapon = "JS"
+                    scenario.murderer = getRandomListValue(teachers)
+                }
+            }
+            unexpectedOutcome("Jarrod")
+
+        }
+    }
+    scenario.victim = getRandomListValue(students)
+    plotTwist("psd61")
+
+}
+
+const playItOut = function () {
+    return `${scenario.victim}'s internet connection was destroyed by ${scenario.murderer} who used ${scenario.weapon}.\n${scenario.victim}: "You were behind my poor internet connection today? \n${scenario.murderer}: "No ${scenario.victim}, It was allways me!"`
+}
+
+changeScenario();
+const verdict = playItOut();
+console.log(verdict);
+
